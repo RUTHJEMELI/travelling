@@ -1,8 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
+	const [formData, setFormData] = useState({
+		name: '',
+		email: '',
+		phone_number: '',
+		starting_city: '',
+		destination_city: '',
+	});
+
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prevData) => ({
+			...prevData,
+			[name]: value,
+		}));
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		try {
+			const response = await fetch('http://localhost:8000/bookings/booking/', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (response.ok) {
+				toast.success('Appointment booked successfully!');
+			} else {
+				toast.error('Failed to book appointment. Please try again.');
+			}
+		} catch (error) {
+			console.error('Error:', error);
+			toast.error('An error occurred. Please try again later.');
+		}
+	};
+
 	return (
 		<section className='bg-gray-50 text-gray-800 py-12 px-6 md:px-12 lg:px-24'>
+			<ToastContainer /> {/* Toast container for displaying notifications */}
 			<div className='container mx-auto'>
 				<h1 className='text-4xl font-bold text-center text-blue-900 mb-6'>
 					Get in Touch
@@ -15,7 +57,10 @@ function Contact() {
 				<div className='flex flex-col md:flex-row gap-8'>
 					{/* Contact Form */}
 					<div className='md:w-2/3'>
-						<form className='bg-white shadow-md rounded-lg px-8 py-6'>
+						<form
+							className='bg-white shadow-md rounded-lg px-8 py-6'
+							onSubmit={handleSubmit}
+						>
 							<div className='mb-4'>
 								<label
 									htmlFor='name'
@@ -29,9 +74,13 @@ function Contact() {
 									name='name'
 									className='w-full mt-2 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900'
 									placeholder='Your name'
+									value={formData.name}
+									onChange={handleChange}
 									required
 								/>
 							</div>
+
+							{/* Email Input */}
 							<div className='mb-4'>
 								<label
 									htmlFor='email'
@@ -45,30 +94,77 @@ function Contact() {
 									name='email'
 									className='w-full mt-2 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900'
 									placeholder='Your email'
+									value={formData.email}
+									onChange={handleChange}
 									required
 								/>
 							</div>
+
+							{/* Phone Number Input */}
 							<div className='mb-4'>
 								<label
-									htmlFor='message'
+									htmlFor='phone_number'
 									className='block text-gray-700 font-semibold'
 								>
-									Message
+									Phone Number
 								</label>
-								<textarea
-									id='message'
-									name='message'
+								<input
+									type='tel'
+									id='phone_number'
+									name='phone_number'
 									className='w-full mt-2 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900'
-									rows='4'
-									placeholder='How can we assist you?'
+									placeholder='Your phone number start with country code i.e +254'
+									value={formData.phone_number}
+									onChange={handleChange}
 									required
-								></textarea>
+								/>
 							</div>
+
+							{/* Starting City Input */}
+							<div className='mb-4'>
+								<label
+									htmlFor='starting_city'
+									className='block text-gray-700 font-semibold'
+								>
+									Starting City
+								</label>
+								<input
+									type='text'
+									id='starting_city'
+									name='starting_city'
+									className='w-full mt-2 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900'
+									placeholder='Starting city'
+									value={formData.starting_city}
+									onChange={handleChange}
+									required
+								/>
+							</div>
+
+							{/* Destination City Input */}
+							<div className='mb-4'>
+								<label
+									htmlFor='destination_city'
+									className='block text-gray-700 font-semibold'
+								>
+									Destination City
+								</label>
+								<input
+									type='text'
+									id='destination_city'
+									name='destination_city'
+									className='w-full mt-2 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900'
+									placeholder='Destination city'
+									value={formData.destination_city}
+									onChange={handleChange}
+									required
+								/>
+							</div>
+
 							<button
 								type='submit'
 								className='w-full bg-blue-900 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors'
 							>
-								Send Message
+								Make Appointment
 							</button>
 						</form>
 					</div>
@@ -91,40 +187,6 @@ function Contact() {
 						<p className='text-gray-600'>
 							<strong>Location:</strong> Nairobi, Kenya
 						</p>
-						<div className='flex justify-center md:justify-start space-x-4 mt-6'>
-							<a
-								href='https://facebook.com'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='text-blue-900 hover:text-blue-700'
-							>
-								<i className='fab fa-facebook-f'></i>
-							</a>
-							<a
-								href='https://twitter.com'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='text-blue-900 hover:text-blue-700'
-							>
-								<i className='fab fa-twitter'></i>
-							</a>
-							<a
-								href='https://instagram.com'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='text-blue-900 hover:text-blue-700'
-							>
-								<i className='fab fa-instagram'></i>
-							</a>
-							<a
-								href='https://linkedin.com'
-								target='_blank'
-								rel='noopener noreferrer'
-								className='text-blue-900 hover:text-blue-700'
-							>
-								<i className='fab fa-linkedin'></i>
-							</a>
-						</div>
 					</div>
 				</div>
 			</div>

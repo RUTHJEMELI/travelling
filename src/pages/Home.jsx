@@ -30,7 +30,7 @@ function HomePage() {
 				journeys for every traveler. Let us handle the details while you focus
 				on the experience.
 			</p>
-			<Link to='/appointment'>
+			<Link to='/contact'>
 				<button className='mt-8 px-6 py-3 bg-blue-950 text-white font-semibold rounded-lg shadow-md hover:bg-blue-800'>
 					Book an Appointment
 				</button>
