@@ -24,7 +24,7 @@ function HomePage() {
 				backSpeed={40}
 				loop
 			/>
-			<p className='text-lg md:text-xl font-semibold text-white mt-6 max-w-md text-center px-4'>
+			<p className='text-lg md:text-xl font-semibold text-black mt-6 max-w-md text-center px-4'>
 				Welcome to OpenDoors Traveling and Consultancy Agency "At OpenDoors,
 				we’re here to help you step into new opportunities. Whether you’re
 				looking for work abroad, exploring universities overseas, or need expert
