@@ -23,13 +23,16 @@ function Contact() {
 		e.preventDefault();
 
 		try {
-			const response = await fetch('http://localhost:8000/bookings/booking/', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(formData),
-			});
+			const response = await fetch(
+				'https://travelling-agency-backend-django-2.onrender.com/booking/',
+				{
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(formData),
+				}
+			);
 
 			if (response.ok) {
 				toast.success('Appointment booked successfully!');
@@ -113,7 +116,7 @@ function Contact() {
 									id='phone_number'
 									name='phone_number'
 									className='w-full mt-2 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900'
-									placeholder='Your phone number start with country code i.e +254'
+									placeholder='Your phone number start with country code i.e +'
 									value={formData.phone_number}
 									onChange={handleChange}
 									required
