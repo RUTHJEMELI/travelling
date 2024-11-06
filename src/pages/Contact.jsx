@@ -24,7 +24,7 @@ function Contact() {
 
 		try {
 			const response = await fetch(
-				'https://travelling-agency-backend-django-2.onrender.com/booking/',
+				'https://travelling-agency-backend-django-2.onrender.com/booking/booking/',
 				{
 					method: 'POST',
 					headers: {
