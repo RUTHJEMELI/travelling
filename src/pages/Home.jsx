@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactTyped } from 'react-typed';
-import homePageImage from '../assets/pexels-2mephoto-29096581.jpg';
+import homePageImage from '../assets/home.jpeg'
 import { Link } from 'react-router-dom';
 
 function HomePage() {
