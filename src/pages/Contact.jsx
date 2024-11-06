@@ -182,13 +182,13 @@ function Contact() {
 							come true!
 						</p>
 						<p className='text-gray-600'>
-							<strong>Email:</strong> info@wanderwise.com
+							<strong>Email:</strong> info@opendoorstravelling.com
 						</p>
 						<p className='text-gray-600'>
-							<strong>Phone:</strong> +254-123-456-789
+							<strong>Phone:</strong> +254-719-682-399
 						</p>
 						<p className='text-gray-600'>
-							<strong>Location:</strong> Nairobi, Kenya
+							<strong>Location:</strong> 11th fl., Tomboya St., Nairobi
 						</p>
 					</div>
 				</div>

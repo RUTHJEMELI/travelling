@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-	FaPlaneDeparture,
-	FaHotel,
-	FaMapSigns,
+	FaGlobe,
+	FaGraduationCap,
+	FaMapMarkedAlt,
 	FaPassport,
-	FaCar,
-	FaConciergeBell,
+	FaTruckMoving,
+	FaChalkboardTeacher,
 } from 'react-icons/fa';
 
 function Services() {
@@ -16,44 +16,44 @@ function Services() {
 					Our Services
 				</h1>
 				<p className='text-center text-gray-600 max-w-2xl mx-auto mb-12 px-4'>
-					We offer a range of tailored travel consultancy services to help make
-					your journey seamless, adventurous, and unforgettable.
+					We offer a range of services to support your journey, from education
+					and career placements to visa assistance and relocation planning.
 				</p>
 
 				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
-					{/* Flight Booking */}
+					{/* International Job Placement */}
 					<div className='bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition-shadow'>
-						<FaPlaneDeparture className='text-blue-900 text-5xl mx-auto mb-4' />
+						<FaGlobe className='text-blue-900 text-5xl mx-auto mb-4' />
 						<h3 className='text-xl md:text-2xl font-semibold mb-2'>
-							Flight Booking
+							International Job Placement
 						</h3>
 						<p className='text-gray-600'>
-							Let us take care of your flight reservations to give you a smooth
-							start to your journey.
+							We connect you with job opportunities abroad, helping you advance
+							your career on a global scale.
 						</p>
 					</div>
 
-					{/* Accommodation */}
+					{/* Student Placement Services */}
 					<div className='bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition-shadow'>
-						<FaHotel className='text-blue-900 text-5xl mx-auto mb-4' />
+						<FaGraduationCap className='text-blue-900 text-5xl mx-auto mb-4' />
 						<h3 className='text-xl md:text-2xl font-semibold mb-2'>
-							Accommodation
+							Student Placement Services
 						</h3>
 						<p className='text-gray-600'>
-							We find the best accommodation options that suit your budget and
-							preferences.
+							Find the right educational opportunities for your academic and
+							career goals with our expert placement services.
 						</p>
 					</div>
 
-					{/* Guided Tours */}
+					{/* Travel Consultation and Planning */}
 					<div className='bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition-shadow'>
-						<FaMapSigns className='text-blue-900 text-5xl mx-auto mb-4' />
+						<FaMapMarkedAlt className='text-blue-900 text-5xl mx-auto mb-4' />
 						<h3 className='text-xl md:text-2xl font-semibold mb-2'>
-							Guided Tours
+							Travel Consultation and Planning
 						</h3>
 						<p className='text-gray-600'>
-							Explore with confidence—our guided tours cover every detail to
-							make your experience memorable.
+							Plan your travels with ease—our consultation services cover every
+							detail to make your journey seamless.
 						</p>
 					</div>
 
@@ -64,32 +64,32 @@ function Services() {
 							Visa Assistance
 						</h3>
 						<p className='text-gray-600'>
-							Our experts handle visa applications and documentation, so you can
-							focus on the fun parts of travel.
+							Our team assists with visa applications and documentation,
+							ensuring you’re ready for travel.
 						</p>
 					</div>
 
-					{/* Car Rentals */}
+					{/* Relocation Services */}
 					<div className='bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition-shadow'>
-						<FaCar className='text-blue-900 text-5xl mx-auto mb-4' />
+						<FaTruckMoving className='text-blue-900 text-5xl mx-auto mb-4' />
 						<h3 className='text-xl md:text-2xl font-semibold mb-2'>
-							Car Rentals
+							Relocation Services
 						</h3>
 						<p className='text-gray-600'>
-							From airport pickups to local travel, we provide convenient car
-							rental solutions for your trip.
+							We help with your move, from logistics to settling in, making your
+							relocation smooth and stress-free.
 						</p>
 					</div>
 
-					{/* Custom Itineraries */}
+					{/* Career Counseling and Guidance */}
 					<div className='bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition-shadow'>
-						<FaConciergeBell className='text-blue-900 text-5xl mx-auto mb-4' />
+						<FaChalkboardTeacher className='text-blue-900 text-5xl mx-auto mb-4' />
 						<h3 className='text-xl md:text-2xl font-semibold mb-2'>
-							Custom Itineraries
+							Career Counseling and Guidance
 						</h3>
 						<p className='text-gray-600'>
-							Our consultants create tailored itineraries to match your unique
-							travel goals and schedule.
+							Get personalized guidance to help you navigate your career path
+							and make informed decisions.
 						</p>
 					</div>
 				</div>

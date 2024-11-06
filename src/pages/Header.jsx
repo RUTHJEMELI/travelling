@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import logo from '../assets/logo.png';
+import myLogo from '../assets/myLogo.jpeg'
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = () => {
@@ -19,12 +19,14 @@ const Header = () => {
 				<div className='flex items-center mb-2 md:mb-0'>
 					<Link to='/' className='flex items-center space-x-2'>
 						<img
-							src={logo}
+							src={myLogo}
 							alt='Logo'
 							style={{ width: '70px', height: '70px' }}
 							className='rounded-full'
 						/>
-						<h2 className='font-bold text-xl'>WanderWise Consultancy</h2>
+						<h2 className='font-bold text-xl'>
+						OpenDoors Consultancy Agency
+						</h2>
 					</Link>
 				</div>
 
