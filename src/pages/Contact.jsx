@@ -36,6 +36,14 @@ function Contact() {
 
 			if (response.ok) {
 				toast.success('Appointment booked successfully!');
+				// Clear the form after success
+				setFormData({
+					name: '',
+					email: '',
+					phone_number: '',
+					starting_city: '',
+					destination_city: ''
+				})
 			} else {
 				toast.error('Failed to book appointment. Please try again.');
 			}
