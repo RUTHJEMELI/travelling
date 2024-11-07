@@ -116,7 +116,7 @@ function Contact() {
 									id='phone_number'
 									name='phone_number'
 									className='w-full mt-2 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-900'
-									placeholder='Your phone number start with country code i.e +'
+									placeholder='Your phone number start with country code i.e +254'
 									value={formData.phone_number}
 									onChange={handleChange}
 									required
