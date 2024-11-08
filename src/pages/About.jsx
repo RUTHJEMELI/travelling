@@ -14,7 +14,7 @@ function About() {
 				<h1 className='text-4xl font-bold mb-6 text-blue-900'>
 					About OpenDoors Traveling and Consultancy Agency
 				</h1>
-				<p className='text-lg leading-relaxed text-gray-600 mb-8'>
+				<p className='text-lg leading-relaxed text-gray-600 mb-8 text-justify'>
 					OpenDoors Traveling and Consultancy Agency was founded with a mission
 					to bridge the gap between talent and global opportunities. Based in
 					Kenya and registered under the National Employment Authority, we’re
@@ -30,7 +30,7 @@ function About() {
 						<h2 className='text-2xl font-semibold text-blue-900 mb-4'>
 							Who We Are
 						</h2>
-						<p className='text-md text-gray-600'>
+						<p className='text-md text-gray-600 text-justify'>
 							At OpenDoors Traveling and Consultancy Agency, we are a dedicated
 							team committed to unlocking global opportunities for individuals
 							seeking to grow in their careers, education, and experiences.
@@ -51,7 +51,7 @@ function About() {
 						<h2 className='text-2xl font-semibold text-blue-900 mb-4'>
 							Why Choose Us
 						</h2>
-						<p className='text-md text-gray-600'>
+						<p className='text-md text-gray-600 text-justify'>
 							Choosing OpenDoors means partnering with a team that is truly
 							invested in your success. Here’s why we’re the best choice for
 							your global journey: Personalized Service We understand that every
@@ -76,14 +76,14 @@ function About() {
 						<h2 className='text-2xl font-semibold text-blue-900 mb-4'>
 							What We Offer
 						</h2>
-						<p className='text-md text-gray-600'>
-							We offer comprehensive services to unlock global
-							opportunities for you. Our International Job Placement service
-							connects skilled professionals with top employers in countries
-							such as the UK, Ireland, the US, Canada, Turkey, New Zealand,
-							Germany, and beyond. Whether you’re seeking permanent, temporary,
-							or contract positions, we help match your expertise with exciting
-							job opportunities worldwide. For students, our Student Placement
+						<p className='text-md text-gray-600 text-justify'>
+							We offer comprehensive services to unlock global opportunities for
+							you. Our International Job Placement service connects skilled
+							professionals with top employers in countries such as the UK,
+							Ireland, the US, Canada, Turkey, New Zealand, Germany, and beyond.
+							Whether you’re seeking permanent, temporary, or contract
+							positions, we help match your expertise with exciting job
+							opportunities worldwide. For students, our Student Placement
 							Services provide expert guidance through the application process
 							for universities abroad, helping you choose the right programs,
 							navigate applications, and understand visa requirements for
