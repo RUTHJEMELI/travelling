@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function About() {
+	const navigate = useNavigate();
+
+	const handleNavigateToContact = () => {
+		navigate('/contact'); // Update this path to your actual Contact route
+	};
+
 	return (
 		<section className='bg-white text-gray-800 py-12 px-6 md:px-12 lg:px-24'>
 			<div className='container mx-auto text-center'>
@@ -96,12 +103,12 @@ function About() {
 				</div>
 
 				<div className='mt-12'>
-					<a
-						href='#contact'
+					<button
+						onClick={handleNavigateToContact}
 						className='inline-block bg-blue-900 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition-colors'
 					>
 						Get in Touch
-					</a>
+					</button>
 				</div>
 			</div>
 		</section>
