@@ -3,6 +3,14 @@ import React from 'react';
 function Blog() {
 	const posts = [
 		{
+			title: 'Exciting Nursing Opportunities in the USA!',
+			date: 'January 7, 2025',
+			description:
+				'Explore life-changing nursing opportunities with Health Carousel International. Start your journey to a rewarding career in the USA today!',
+			link: 'https://www.passportusa.com/nursing-jobs-usa',
+			highlight: true, // New property to differentiate this post
+		},
+		{
 			title: 'Top 10 Travel Destinations for 2024',
 			date: 'October 1, 2024',
 			description:
@@ -39,7 +47,7 @@ function Blog() {
 					Travel Insights & Tips
 				</h1>
 				<p className='text-center text-gray-600 max-w-2xl mx-auto mb-12 px-4'>
-					Dive into our travel blog for tips, insights, and stories from around
+					Dive into our blog for tips, insights, and opportunities from around
 					the world to inspire your next journey.
 				</p>
 
@@ -47,16 +55,28 @@ function Blog() {
 					{posts.map((post, index) => (
 						<div
 							key={index}
-							className='bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow'
+							className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${
+								post.highlight ? 'border-2 border-blue-500' : ''
+							}`}
 						>
-							<h2 className='text-xl md:text-2xl font-semibold text-blue-900 mb-2'>
+							<h2
+								className={`text-xl md:text-2xl font-semibold mb-2 ${
+									post.highlight ? 'text-blue-700' : 'text-blue-900'
+								}`}
+							>
 								{post.title}
 							</h2>
 							<p className='text-sm text-gray-500 mb-4'>{post.date}</p>
 							<p className='text-gray-600 mb-4'>{post.description}</p>
 							<a
 								href={post.link}
-								className='text-blue-700 font-semibold hover:text-blue-900'
+								target='_blank'
+								rel='noopener noreferrer'
+								className={`font-semibold ${
+									post.highlight
+										? 'text-blue-700 underline hover:text-blue-900'
+										: 'text-blue-700 hover:text-blue-900'
+								}`}
 							>
 								Read More &rarr;
 							</a>
