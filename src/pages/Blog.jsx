@@ -8,7 +8,7 @@ function Blog() {
 			description:
 				'Explore life-changing nursing opportunities with Health Carousel International. Start your journey to a rewarding career in the USA today!',
 			link: 'https://www.passportusa.com/nursing-jobs-usa',
-			highlight: true, // New property to differentiate this post
+			highlight: true, // Special highlight
 		},
 		{
 			title: 'Top 10 Travel Destinations for 2024',
@@ -38,13 +38,35 @@ function Blog() {
 				'Traveling solo can be an incredible experience. Here are essential tips for safe and enjoyable solo journeys.',
 			link: '#',
 		},
+		// New Cards
+		{
+			title: 'Work in Turkey: Visa & Requirements 2025',
+			date: 'January 13, 2025',
+			description:
+				'Learn about Turkey’s 2025 work visa process, including updated requirements and how to apply today.',
+			link: 'https://daadscholarship.com/turkey-work-visa-2025-update-requirements-and-application-process/',
+		},
+		{
+			title: 'Mastercard Foundation Scholars Program',
+			date: 'January 11, 2025',
+			description:
+				'Discover the Mastercard Foundation Scholars Program. Apply now to transform your future with education opportunities.',
+			link: 'https://opportunitiesforyoungkenyans.co.ke/2025/01/11/the-mastercard-foundation-scholars-program-open/',
+		},
+		{
+			title: 'Exciting Global Career Opportunities',
+			date: 'January 13, 2025',
+			description:
+				'Explore the latest career opportunities worldwide. Connect with recruiters and take your next big step today!',
+			link: 'https://chancenkarte.com/en/candidates/',
+		},
 	];
 
 	return (
 		<div className='bg-gray-50 py-12'>
 			<div className='container mx-auto px-4'>
 				<h1 className='text-4xl md:text-5xl font-bold text-blue-900 text-center mb-8'>
-					Travel Insights & Tips
+					Travel Insights & Opportunities
 				</h1>
 				<p className='text-center text-gray-600 max-w-2xl mx-auto mb-12 px-4'>
 					Dive into our blog for tips, insights, and opportunities from around
