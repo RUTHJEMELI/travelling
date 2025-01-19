@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Blog() {
-	const posts = [
+	let posts = [
 		{
 			title: 'Exciting Nursing Opportunities in the USA!',
 			date: 'January 7, 2025',
@@ -10,35 +10,6 @@ function Blog() {
 			link: 'https://www.passportusa.com/nursing-jobs-usa',
 			highlight: true, // Special highlight
 		},
-		{
-			title: 'Top 10 Travel Destinations for 2024',
-			date: 'October 1, 2024',
-			description:
-				'Discover the must-visit travel destinations for the upcoming year, including hidden gems and popular spots.',
-			link: '#',
-		},
-		{
-			title: 'Packing Essentials for Every Traveler',
-			date: 'September 15, 2024',
-			description:
-				'A comprehensive guide to packing essentials, helping you stay prepared without the extra baggage.',
-			link: '#',
-		},
-		{
-			title: 'How to Travel on a Budget',
-			date: 'August 20, 2024',
-			description:
-				'Maximize your travel experience without breaking the bank. Explore budget-friendly tips for every destination.',
-			link: '#',
-		},
-		{
-			title: 'Tips for Solo Travelers',
-			date: 'August 5, 2024',
-			description:
-				'Traveling solo can be an incredible experience. Here are essential tips for safe and enjoyable solo journeys.',
-			link: '#',
-		},
-		// New Cards
 		{
 			title: 'Work in Turkey: Visa & Requirements 2025',
 			date: 'January 13, 2025',
@@ -60,7 +31,20 @@ function Blog() {
 				'Explore the latest career opportunities worldwide. Connect with recruiters and take your next big step today!',
 			link: 'https://chancenkarte.com/en/candidates/',
 		},
+		{
+			title: 'LEAD College of Management MBA Application',
+			date: 'January 14, 2025',
+			description:
+				'Apply for an MBA at LEAD College of Management. Transform your career with world-class education and leadership opportunities.',
+			link: 'https://admission.lead.ac.in/lead-college-of-management-mba-application/',
+		},
 	];
+
+	// Sort posts by date (descending order)
+	posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+	// Highlight the latest post
+	posts[0].highlight = true;
 
 	return (
 		<div className='bg-gray-50 py-12'>
